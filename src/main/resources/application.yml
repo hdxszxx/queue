@@ -1,0 +1,33 @@
+spring:
+  freemarker:
+    allow-request-override: false
+    cache: false
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings:
+      number_format: 0.##
+      classic_compatible: true
+  #Redis
+  #spring.redis.host=127.0.0.1
+  redis:
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # 连接超时时间（毫秒）
+    timeout: 1200
+    # Redis服务器连接密码（默认为空）
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        maxActive: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        maxWait: 10
+        ## 连接池中的最大空闲连接
+        maxIdle: 8
